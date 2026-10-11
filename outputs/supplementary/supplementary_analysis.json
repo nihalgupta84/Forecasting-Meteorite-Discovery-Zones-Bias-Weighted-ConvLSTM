@@ -1,5 +1,53 @@
 {
   "note": "seed-4 checkpoints / deterministic baselines; single seed",
+  "error_decomposition": {
+    "target_empty_cell_share": 0.9820987654320987,
+    "convlstm": {
+      "mse": 0.0032535053323954344,
+      "mse_from_antarctica": 0.0020466952119022608,
+      "mse_share_antarctica": 0.6290739178657532,
+      "mae": 0.0324893519282341,
+      "mae_from_empty_cells": 0.030831418931484222,
+      "mean_pred_on_empty_cells": 0.03154129162430763,
+      "share_cells_pred_gt_0.01": 0.9361111111111111
+    },
+    "attention": {
+      "mse": 0.0018922119634225965,
+      "mse_from_antarctica": 0.0003515290154609829,
+      "mse_share_antarctica": 0.1857767552137375,
+      "mae": 0.03215966373682022,
+      "mae_from_empty_cells": 0.030179958790540695,
+      "mean_pred_on_empty_cells": 0.030877290293574333,
+      "share_cells_pred_gt_0.01": 0.9389506172839506
+    },
+    "predrnn": {
+      "mse": 0.0025403820909559727,
+      "mse_from_antarctica": 0.0010434472933411598,
+      "mse_share_antarctica": 0.41074424982070923,
+      "mae": 0.030672593042254448,
+      "mae_from_empty_cells": 0.028405483812093735,
+      "mean_pred_on_empty_cells": 0.029061630368232727,
+      "share_cells_pred_gt_0.01": 0.8871604938271604
+    },
+    "LastFrame": {
+      "mse": 0.0024601577315479517,
+      "mse_from_antarctica": 0.002099894918501377,
+      "mse_share_antarctica": 0.8535611033439636,
+      "mae": 0.007227363996207714,
+      "mae_from_empty_cells": 0.0054504345171153545,
+      "mean_pred_on_empty_cells": 0.005662058014422655,
+      "share_cells_pred_gt_0.01": 0.06345679012345679
+    },
+    "ClimatologicalMean": {
+      "mse": 0.004506784025579691,
+      "mse_from_antarctica": 6.09881135460455e-05,
+      "mse_share_antarctica": 0.013532512821257114,
+      "mae": 0.015943756327033043,
+      "mae_from_empty_cells": 0.014108472503721714,
+      "mean_pred_on_empty_cells": 0.014446087181568146,
+      "share_cells_pred_gt_0.01": 0.1797530864197531
+    }
+  },
   "sanity": {
     "convlstm": {
       "recomputed": {

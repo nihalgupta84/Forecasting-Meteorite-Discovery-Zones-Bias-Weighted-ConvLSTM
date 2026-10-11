@@ -14,6 +14,9 @@ Evaluation-only analyses on the released seed-4 models (no training):
                    the (0, 0) records
   5. hotspots    — coordinates of the top-5 undiscovered-hotspot cells
                    (same peak-picking rule as visualise.py)
+  6. error_decomposition — share of each method's MSE coming from Antarctic
+                   cells (lat <= -70) and the MAE contributed by cells that
+                   are empty in the target (< 0.01)
 
 Usage:
     python supplementary_analysis.py
@@ -180,7 +183,22 @@ def main():
             "metrics_full": {n: metrics_np(p, target) for n, p in allp.items()},
             "metrics_excluded": {n: metrics_np(p, target, keep=keep) for n, p in allp.items()}}
 
+    # ── 6. error decomposition ───────────────────────────────────────────────
+    empty = target < 0.01
+    ant = LAT_G <= -70
+    decomp = {"target_empty_cell_share": float(empty.mean())}
+    for n, p in allp.items():
+        se, ae = (p - target) ** 2, np.abs(p - target)
+        decomp[n] = {"mse": float(se.mean()),
+                     "mse_from_antarctica": float(se[ant].sum() / se.size),
+                     "mse_share_antarctica": float(se[ant].sum() / se.sum()),
+                     "mae": float(ae.mean()),
+                     "mae_from_empty_cells": float(ae[empty].sum() / ae.size),
+                     "mean_pred_on_empty_cells": float(p[empty].mean()),
+                     "share_cells_pred_gt_0.01": float((p > 0.01).mean())}
+
     out = {"note": "seed-4 checkpoints / deterministic baselines; single seed",
+           "error_decomposition": decomp,
            "sanity": sanity, "thresholds": thr, "null_island": null,
            "catalogue": catalogue_stats(),
            "hotspots_attention": hotspots(saved["attention"], mask)}

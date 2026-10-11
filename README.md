@@ -87,7 +87,8 @@ for PredRNN because of CPU vs GPU arithmetic. The script then runs the paper's s
 - top-1% and top-5% hotspot overlap;
 - metrics with the (0°, 0°) region excluded;
 - catalogue statistics for each mask region;
-- the top-5 hotspot coordinates.
+- the top-5 hotspot coordinates;
+- an error breakdown (share of MSE from Antarctic cells, MAE from empty target cells).
 
 Output: `outputs/supplementary/supplementary_analysis.json`.
 
