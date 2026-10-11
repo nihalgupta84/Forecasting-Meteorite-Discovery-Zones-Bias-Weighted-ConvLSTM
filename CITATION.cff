@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "Forecasting Meteorite Discovery Zones with Bias-Weighted ConvLSTM on Decadal KDE Density Map Sequences"
+type: software
+license: MIT
+repository-code: "https://github.com/nihalgupta84/Forecasting-Meteorite-Discovery-Zones-Bias-Weighted-ConvLSTM"
+authors:
+  - given-names: Nihal
+    family-names: Kumar
+    orcid: "https://orcid.org/0009-0008-9878-1680"
+  - given-names: Avishek
+    family-names: Kumar
+    orcid: "https://orcid.org/0000-0003-0927-3956"
+  - name: Vidhi
+    orcid: "https://orcid.org/0009-0005-5251-6409"
+  - given-names: Dhruv
+    family-names: Sharma
+    orcid: "https://orcid.org/0000-0002-9656-9714"
+  - given-names: Alok
+    family-names: Tiwari
+    orcid: "https://orcid.org/0000-0001-8679-3926"
+  - given-names: Piyush
+    family-names: Gupta
+preferred-citation:
+  type: conference-paper
+  title: "Forecasting Meteorite Discovery Zones with Bias-Weighted ConvLSTM on Decadal KDE Density Map Sequences"
+  authors:
+    - given-names: Nihal
+      family-names: Kumar
+    - given-names: Avishek
+      family-names: Kumar
+    - name: Vidhi
+    - given-names: Dhruv
+      family-names: Sharma
+    - given-names: Alok
+      family-names: Tiwari
+    - given-names: Piyush
+      family-names: Gupta
+  collection-title: "Computer Vision and Image Processing (CVIP 2026)"
+  publisher:
+    name: Springer
+  year: 2026
