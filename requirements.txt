@@ -1,0 +1,9 @@
+# Tested with Python 3.10
+torch==2.7.1
+numpy==2.2.6
+scipy==1.15.3
+pandas==2.3.3
+matplotlib==3.10.9
+cartopy==0.25.0
+pillow==12.2.0
+wandb==0.25.1   # optional logging; all scripts run with --no-wandb / without an account

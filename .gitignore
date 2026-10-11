@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+wandb/
+*.log
+.ipynb_checkpoints/
+.DS_Store
+outputs/figures/
+outputs/checkpoint_eval.json
